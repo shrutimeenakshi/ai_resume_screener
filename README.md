@@ -1,109 +1,120 @@
-# 🤖 AI Resume Screening System
+# 🤖 AI-Powered Resume Screening and ATS Ranking System
 
-An AI-powered Resume Screening and Candidate Shortlisting platform developed using Flask, Python, NLP, and SQL. The system automates resume analysis by matching candidate resumes against job descriptions and generating intelligent match scores for efficient hiring decisions.
+An AI-powered Resume Screening and Candidate Ranking System developed using Flask, Python, NLP, Machine Learning, and SQLite. The platform automates resume analysis by intelligently matching resumes with job descriptions, predicting candidate roles, and ranking applicants based on compatibility scores.
 
-The platform helps HR teams and recruiters streamline the recruitment process by reducing manual screening efforts and improving candidate selection accuracy.
+The system helps recruiters and HR teams streamline the hiring process by reducing manual screening efforts and improving candidate shortlisting accuracy.
 
 ---
 
 # 🚀 Features
 
-✅ Resume upload and parsing
-✅ AI-powered Job Description (JD) matching
-✅ Automated resume scoring system
-✅ NLP-based skill extraction
-✅ Candidate shortlisting
-✅ Admin dashboard for HR management
-✅ Resume filtering and search
-✅ Bulk resume upload support
-✅ Resume download functionality
-✅ Send selected resumes to Talent Acquisition (TA) team
-✅ Match percentage visualization
-✅ Database integration for resume storage
+✅ Resume Upload and Parsing
+✅ PDF and DOCX Resume Support
+✅ AI-Based Resume Classification
+✅ Logistic Regression ML Model
+✅ TF-IDF Vectorization
+✅ Cosine Similarity Matching
+✅ Automated Resume Ranking
+✅ Confidence Score Prediction
+✅ ATS-Style Candidate Screening
+✅ Top Candidate Highlighting
+✅ Job Description (JD) Matching
+✅ Admin Dashboard for Recruiters
+✅ Resume Download Functionality
+✅ Candidate Shortlisting
+✅ Bulk Resume Upload Support
+✅ Database Integration using SQLite
 
 ---
 
 # 🛠️ Tech Stack
 
-| Category         | Technologies                               |
-| ---------------- | ------------------------------------------ |
-| Backend          | Python, Flask                              |
-| Frontend         | HTML, CSS, Bootstrap, JavaScript           |
-| Database         | SQLite / SQLAlchemy                        |
-| AI/NLP           | NLP, Resume Parsing                        |
-| Authentication   | Flask Login / JWT                          |
-| Additional Tools | PDF Processing, Resume Matching Algorithms |
+| Category         | Technologies                     |
+| ---------------- | -------------------------------- |
+| Backend          | Python, Flask                    |
+| Frontend         | HTML, CSS, Bootstrap, JavaScript |
+| Database         | SQLite, SQLAlchemy               |
+| Machine Learning | Logistic Regression              |
+| NLP Techniques   | TF-IDF, Cosine Similarity        |
+| Resume Parsing   | PDFMiner, python-docx            |
+| Tools            | Git, GitHub                      |
+
+---
+
+# 🧠 AI / ML Workflow
+
+1. Resume is uploaded in PDF or DOCX format
+2. Resume text is extracted automatically
+3. TF-IDF vectorization converts text into numerical vectors
+4. Logistic Regression predicts candidate job role
+5. Cosine Similarity compares resume with Job Description
+6. Match score and confidence score are generated
+7. Candidates are ranked automatically
+8. Top candidate is highlighted for recruiters
 
 ---
 
 # 📂 Project Structure
 
-```plaintext id="g9q8dt"
-AI-Resume-Screener/
+```bash
+AI_RESUME_SCREENER/
 │
-├── static/                  # CSS, JavaScript, assets
-├── templates/               # HTML templates and UI pages
-├── uploads/                 # Uploaded resumes
-├── utils/                   # Resume parsing and matching logic
-├── app.py                   # Main Flask application
-├── database.db              # SQLite database
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
+├── static/
+├── templates/
+├── utils/
+├── resumes/
+├── db/
+│
+├── app.py
+├── train_model.py
+├── resume_dataset.csv
+├── resume_classifier.pkl
+├── requirements.txt
+├── README.md
 ```
 
 ---
 
 # 👨‍💻 System Modules
 
-## 🔹 Admin Module
+## 🔹 Resume Parsing Module
 
-The administrator can:
+* Extracts text from PDF and DOCX resumes
+* Extracts candidate details
+* Performs preprocessing for NLP
 
-* Login securely
-* Upload Job Descriptions
-* Filter resumes based on match score
-* View shortlisted candidates
+---
+
+## 🔹 AI Resume Classification Module
+
+* Uses Logistic Regression for role prediction
+* Predicts categories like:
+
+  * Frontend Developer
+  * DevOps Engineer
+  * Data Analyst
+  * ML Engineer
+  * UI/UX Designer
+
+---
+
+## 🔹 ATS Matching Module
+
+* Performs JD-resume similarity analysis
+* Calculates compatibility scores
+* Ranks candidates automatically
+
+---
+
+## 🔹 Admin Dashboard
+
+Recruiters can:
+
+* View uploaded resumes
+* Filter candidates
 * Download resumes
-* Send selected resumes to TA team
-* Manage uploaded candidate data
-
----
-
-## 🔹 Resume Screening Module
-
-This module handles:
-
-* Resume parsing
-* Text extraction from PDF resumes
-* Skill extraction using NLP
-* Job Description matching
-* Candidate score generation
-* Resume ranking and filtering
-
----
-
-## 🔹 Candidate Management Module
-
-Features include:
-
-* Resume database storage
-* Candidate detail tracking
-* Match percentage visualization
-* Resume categorization
-* Bulk resume management
-
----
-
-# 🔄 System Workflow
-
-1. Admin uploads a Job Description (JD)
-2. Candidates upload their resumes in PDF format
-3. The system extracts resume content using NLP techniques
-4. Skills and keywords are matched with the uploaded JD
-5. Match scores are calculated automatically
-6. Candidates are ranked based on compatibility
-7. Admin filters and shortlists suitable candidates
-8. Selected resumes are forwarded to the Talent Acquisition (TA) team
+* Shortlist candidates
+* View top-ranked applicants
 
 ---
 
@@ -111,44 +122,33 @@ Features include:
 
 ## 📄 Resume Parsing
 
-Extracts text and candidate information from uploaded resumes.
-
-## 🧠 AI-Based Matching
-
-Compares resumes against job descriptions using NLP and keyword analysis.
-
-## 📈 Candidate Scoring
-
-Generates a compatibility score based on skills, experience, and JD matching.
-
-## 🎯 Smart Filtering
-
-Allows recruiters to shortlist candidates efficiently using filters.
-
-## 📥 Resume Management
-
-Stores and manages uploaded resumes in the database.
+Automatically extracts text from uploaded resumes.
 
 ---
 
-# 🗄️ Database
+## 🧠 AI-Based Classification
 
-The system stores:
+Uses Machine Learning to classify resumes into job roles.
 
-* Candidate details
-* Uploaded resumes
-* Match scores
-* Job descriptions
-* Screening results
-* Admin data
+---
+
+## 📈 Resume Ranking
+
+Ranks resumes using cosine similarity and JD matching.
+
+---
+
+## 🎯 Candidate Shortlisting
+
+Highlights top candidates based on compatibility score.
 
 ---
 
 # ⚙️ Installation
 
-## Clone the Repository
+## Clone Repository
 
-```bash id="9b9n16"
+```bash
 git clone https://github.com/shrutimeenakshi/ai_resume_screener.git
 ```
 
@@ -156,7 +156,7 @@ git clone https://github.com/shrutimeenakshi/ai_resume_screener.git
 
 ## Navigate to Project Folder
 
-```bash id="eijg1i"
+```bash
 cd ai_resume_screener
 ```
 
@@ -164,21 +164,23 @@ cd ai_resume_screener
 
 ## Create Virtual Environment
 
-```bash id="94i4b6"
+```bash
 python -m venv venv
 ```
 
-Activate the environment:
+---
+
+## Activate Environment
 
 ### Windows
 
-```bash id="psu3qt"
+```bash
 venv\Scripts\activate
 ```
 
 ### macOS/Linux
 
-```bash id="6ycjlwm"
+```bash
 source venv/bin/activate
 ```
 
@@ -186,15 +188,15 @@ source venv/bin/activate
 
 ## Install Dependencies
 
-```bash id="7q3jlu"
+```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## Run the Application
+## Run Application
 
-```bash id="dyvflk"
+```bash
 python app.py
 ```
 
@@ -202,67 +204,56 @@ python app.py
 
 ## Open in Browser
 
-```plaintext id="uynk7q"
+```bash
 http://127.0.0.1:5000/
 ```
-
 
 ---
 
 # 🎯 Objectives
 
-* Automate resume screening process
+* Automate resume screening
 * Reduce manual hiring effort
 * Improve recruitment efficiency
-* Enable AI-based candidate analysis
-* Provide accurate JD-resume matching
-* Simplify candidate shortlisting
+* Implement AI-based candidate analysis
+* Enable intelligent JD-resume matching
+* Build an ATS-style recruitment system
 
 ---
 
 # 🔮 Future Enhancements
 
+* Deep Learning-based resume analysis
 * AI-generated interview questions
-* Email notification system
+* Email notification integration
 * Cloud deployment
-* Advanced analytics dashboard
-* Multi-role authentication
-* Machine Learning-based candidate ranking
-* Real-time recruitment analytics
+* Advanced recruiter analytics
+* Multi-user authentication
+* Real-time hiring dashboard
 
 ---
 
 # 📚 Learning Outcomes
 
-* Flask backend development
-* NLP implementation
-* Resume parsing techniques
-* Database integration
-* Admin dashboard development
-* AI-based filtering systems
-* Automation workflow design
-* REST API integration
-
----
-
-# 🔐 Security Improvements
-
-Future improvements may include:
-
-* Secure authentication system
-* Role-based access control
-* Encrypted resume storage
-* HTTPS deployment
-* Cloud database integration
+* Flask Backend Development
+* Machine Learning Integration
+* NLP Text Processing
+* Resume Parsing Techniques
+* TF-IDF Vectorization
+* Logistic Regression Classification
+* Cosine Similarity Matching
+* Database Integration
+* Full Stack Development
 
 ---
 
 # 🌟 Applications
 
-* Recruitment automation
-* HR management systems
-* Talent acquisition platforms
-* AI hiring solutions
-* Candidate shortlisting systems
+* Recruitment Automation
+* HR Management Systems
+* Talent Acquisition Platforms
+* AI Hiring Solutions
+* ATS Resume Screening Systems
 
 ---
+
