@@ -1,0 +1,84 @@
+.\venv\Scripts\Activate.ps1
+
+python app.py
+
+Username: admin
+Password: admin123
+
+http://127.0.0.1:5000/
+http://127.0.0.1:5000/admin
+
+Primary Skills: DevOps, Terraform, AWS, Jenkins, Docker, Spring Boot
+Secondary Skills: Cybersecurity, SIEM (Splunk, QRadar), Python, Cloud Security, Web Pentesting
+Location: Chennai
+Experience: 0–1 year
+Qualification: B.E. in Computer Science – Artificial Intelligence
+Age: <23
+
+About the Role:
+We are hiring a DevSecOps Engineer who is passionate about integrating secure development practices across cloud and software delivery pipelines. You’ll work at the intersection of development, security, and operations—automating infrastructure, ensuring secure deployments, and contributing to modern DevOps culture.
+
+Responsibilities:
+
+Design and automate infrastructure provisioning using Terraform and Jenkins.
+
+Implement CI/CD pipelines integrated with security scanning and testing tools.
+
+Collaborate with developers to ensure secure coding and deployment practices.
+
+Monitor and analyze logs using SIEM tools like Splunk and QRadar.
+
+Work with cloud platforms (AWS, GCP, Azure) to manage infrastructure and security configurations.
+
+Conduct basic vulnerability assessments, threat detection, and firewall rule automation.
+
+Contribute to internal security tools and scripts using Python and Bash.
+
+Preferred Attributes:
+
+Strong understanding of cloud architecture and containerization (Docker).
+
+Familiarity with WAF, GuardDuty, VPC, IAM roles, and automation scripts.
+
+Interest in Red Teaming, Capture The Flag (CTF), and ethical hacking.
+
+Excellent problem-solving skills and eagerness to learn new tools and practices.
+
+
+
+
+
+
+Primary Skills: Python, Flask, HTML, CSS, Java
+Secondary Skills: SQL, Java Swing, Responsive Design
+Location: Chennai
+Experience: 0–1 year
+Qualification: B.Tech in Computer Science – Big Data Analytics
+Age: <20
+
+About the Role:
+We are seeking a passionate Junior Software Developer to join our engineering team. You’ll work across the stack, contributing to both backend services and intuitive frontends. This is an excellent opportunity for a curious learner eager to build real-world applications in a collaborative environment.
+
+Responsibilities:
+
+Develop and maintain backend services using Python and Flask.
+
+Collaborate with UI/UX designers to build responsive frontends using HTML, CSS, and JavaScript.
+
+Integrate databases using SQL and perform basic data modeling.
+
+Test APIs using Postman and document integration points.
+
+Participate in team meetings, code reviews, and agile sprint cycles.
+
+Work on feature enhancements and bug fixes for existing applications.
+
+Preferred Attributes:
+
+Strong academic foundation and hands-on projects in full stack development.
+
+Interest in cybersecurity and UI design is a plus.
+
+Effective communication, time management, and teamwork skills.
+
+Willingness to learn new frameworks, tools, and technologies.

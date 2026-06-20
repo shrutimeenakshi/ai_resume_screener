@@ -8,10 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
@@ -53,8 +53,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(1deg);
+            }
         }
 
         /* Floating particles */
@@ -67,8 +74,17 @@
         }
 
         @keyframes particle-float {
-            0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
-            50% { transform: translateY(-100px) translateX(50px); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 0.8;
+            }
         }
 
         /* Main Container */
@@ -96,8 +112,15 @@
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .glass-card:hover {
@@ -356,11 +379,11 @@
                 padding: 30px 20px;
                 margin: 10px;
             }
-            
+
             .header h1 {
                 font-size: 2rem;
             }
-            
+
             .mode-toggle {
                 top: 20px;
                 right: 20px;
@@ -382,8 +405,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -418,12 +446,13 @@
                             <i class="fas fa-cloud-upload-alt"></i>
                         </div>
                         <div class="file-upload-text">
-                            Drop your PDF files here or click to browse
+                            Drop your PDF or DOCX files here or click to browse
                         </div>
                         <div class="file-upload-subtext">
-                            Support for multiple PDF files • Max 10MB per file
+                            Support for PDF and DOCX files • Max 10MB per file
                         </div>
-                        <input type="file" name="resume" id="resume" accept="application/pdf" multiple required class="file-input">
+                        <input type="file" name="resume" id="resume" accept=".pdf,.docx" multiple required
+                            class="file-input">
                         <div class="file-list" id="fileList"></div>
                     </div>
                 </div>
@@ -491,23 +520,23 @@
         let selectedFiles = [];
 
         // Drag and drop functionality
-        fileUploadWrapper.addEventListener('dragover', function(e) {
+        fileUploadWrapper.addEventListener('dragover', function (e) {
             e.preventDefault();
             fileUploadWrapper.classList.add('dragover');
         });
 
-        fileUploadWrapper.addEventListener('dragleave', function(e) {
+        fileUploadWrapper.addEventListener('dragleave', function (e) {
             e.preventDefault();
             fileUploadWrapper.classList.remove('dragover');
         });
 
-        fileUploadWrapper.addEventListener('drop', function(e) {
+        fileUploadWrapper.addEventListener('drop', function (e) {
             e.preventDefault();
             fileUploadWrapper.classList.remove('dragover');
             handleFiles(e.dataTransfer.files);
         });
 
-        fileInput.addEventListener('change', function() {
+        fileInput.addEventListener('change', function () {
             handleFiles(this.files);
         });
 
@@ -536,7 +565,7 @@
         function removeFile(index) {
             selectedFiles.splice(index, 1);
             updateFileList();
-            
+
             // Update the file input
             const dt = new DataTransfer();
             selectedFiles.forEach(file => dt.items.add(file));
@@ -548,7 +577,7 @@
         const submitBtn = document.getElementById('submitBtn');
         const loadingSpinner = document.getElementById('loadingSpinner');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             submitBtn.disabled = true;
             loadingSpinner.style.display = 'inline-block';
             submitBtn.innerHTML = '<span class="loading-spinner"></span> Analyzing...';
@@ -556,7 +585,7 @@
 
         // Auto-resize textarea
         const textarea = document.getElementById('job_desc');
-        textarea.addEventListener('input', function() {
+        textarea.addEventListener('input', function () {
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
